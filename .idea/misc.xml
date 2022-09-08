@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/belin/AndroidStudioProjects/OakDental/app/src/main/res/layout/activity_main.xml" value="0.176" />
+        <entry key="..\:/Users/belin/AndroidStudioProjects/OakDental/app/src/main/res/layout/activity_cadastro.xml" value="0.25" />
+        <entry key="..\:/Users/belin/AndroidStudioProjects/OakDental/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/belin/AndroidStudioProjects/OakDental/app/src/main/res/layout/activity_produto.xml" value="0.264" />
+        <entry key="..\:/Users/belin/AndroidStudioProjects/OakDental/app/src/main/res/layout/odonto_itens.xml" value="0.22592592592592592" />
       </map>
     </option>
   </component>

@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#00668B"
-    tools:context=".MainActivity">
+    tools:context=".CadastroActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -25,7 +24,6 @@
             app:srcCompat="@drawable/logo" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="380dp"
         android:layout_height="500dp"
@@ -35,17 +33,38 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
 
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Faça seu Cadastro"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginTop="32dp"
+            android:layout_gravity="center"/>
+
         <TextView
-            android:id="@+id/txv_login"
+            android:id="@+id/txv_nome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:text="Faça seu login"
-            android:textSize="20sp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:text="Nome"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/txv_cadastro" />
+
+        <EditText
+            android:id="@+id/edt_nome"
+            android:layout_width="325dp"
+            android:layout_height="48dp"
+            android:background="#DCE3E9"
+            android:hint="Digite seu nome"
+            android:layout_marginStart="25dp"
+            app:layout_constraintStart_toStartOf="@+id/txv_nome"
+            app:layout_constraintTop_toBottomOf="@+id/txv_nome" />
 
         <TextView
             android:id="@+id/txv_email"
@@ -53,8 +72,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
             android:layout_marginTop="25dp"
-            android:text="E-mail"
             android:textStyle="bold"
+            android:text="E-mail"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txv_login" />
 
@@ -64,6 +83,8 @@
             android:layout_height="48dp"
             android:background="#DCE3E9"
             android:hint="Digite seu e-mail"
+            android:inputType="textEmailAddress"
+            android:layout_marginStart="25dp"
             app:layout_constraintStart_toStartOf="@+id/txv_email"
             app:layout_constraintTop_toBottomOf="@+id/txv_email" />
 
@@ -73,11 +94,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
             android:layout_marginTop="25dp"
-            android:text="Senha"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edt_email"
-            android:inputType="textEmailAddress"/>
+            android:text="Senha"
+            app:layout_constraintTop_toBottomOf="@+id/edt_email" />
 
         <EditText
             android:id="@+id/edt_senha"
@@ -85,60 +104,21 @@
             android:layout_height="48dp"
             android:background="#DCE3E9"
             android:hint="Digite sua senha"
+            android:inputType="textPassword"
+            android:layout_marginStart="25dp"
             app:layout_constraintStart_toStartOf="@+id/txv_senha"
-            app:layout_constraintTop_toBottomOf="@+id/txv_senha"
-            android:inputType="textPassword"/>
+            app:layout_constraintTop_toBottomOf="@+id/txv_senha" />
 
-        <CheckBox
-            android:id="@+id/ckb_lembrar"
-            android:layout_width="wrap_content"
+        <Button android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="144dp"
-            android:text="Lembrar-me"
-            android:textSize="12dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edt_senha" />
-
-        <Button
-            android:id="@+id/btn_login"
-            android:layout_width="150dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="60dp"
-            android:backgroundTint="#AEEB00"
-            android:text="ENTRAR"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:text="Cadastrar"
             android:textColor="#000000"
-            android:textSize="15dp"
-            app:layout_constraintEnd_toEndOf="@+id/txv_login"
-            app:layout_constraintStart_toStartOf="@+id/txv_login"
-            app:layout_constraintTop_toBottomOf="@+id/edt_senha" />
+            android:backgroundTint="#AEEB00"
+            android:id="@+id/btnSalvar"/>
 
-        <Button
-            android:id="@+id/btn_criarConta"
-            android:layout_width="150dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="5dp"
-            android:text="Criar conta"
-            android:textSize="15dp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@id/btn_login"
-            app:layout_constraintStart_toStartOf="@id/btn_login"
-            app:layout_constraintTop_toBottomOf="@+id/btn_login" />
-
-        <TextView
-            android:id="@+id/txv_ajuda"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="70dp"
-            android:text="Preciso de ajuda"
-            android:textSize="15dp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@id/btn_login"
-            app:layout_constraintStart_toStartOf="@id/btn_login"
-            app:layout_constraintTop_toBottomOf="@+id/btn_criarConta" />
-
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>

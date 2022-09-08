@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="#00668B"
+    android:foregroundGravity="center"
+    android:orientation="horizontal"
+    app:layout_anchorGravity="center"
+    tools:context=".ProdutoActivity">
+
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#001E2C"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="50dp"
+        android:layout_height="52dp"
+        android:layout_margin="8dp"
+        android:contentDescription="@string/logo"
+        app:layout_constraintBaseline_toTopOf="@id/materialToolbar"
+        app:layout_constraintStart_toEndOf="@id/materialToolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_margin="8dp"
+        android:contentDescription="@string/profile"
+        app:layout_constraintBaseline_toTopOf="@id/materialToolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/profile"
+        tools:layout_editor_absoluteY="7dp" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_margin="60dp"
+        android:contentDescription="@string/cart"
+        android:foregroundGravity="center"
+        app:layout_constraintBaseline_toTopOf="@id/materialToolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/cart"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <SearchView
+        android:id="@+id/searchView2"
+        android:layout_width="170dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="14dp"
+        android:background="#EDE7E7"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_produtos"
+        android:layout_width="414dp"
+        android:layout_height="694dp"
+        app:layout_constraintTop_toBottomOf="@id/materialToolbar"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
